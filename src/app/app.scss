@@ -1,0 +1,30 @@
+/* You can add component-specific styles here if needed */
+
+/* Custom CSS for AG Grid cell wrapping */
+/* This ensures that text within AG Grid cells wraps properly for readability */
+.wrap-text-cell {
+    white-space: normal !important; /* Override AG Grid's default no-wrap */
+    line-height: normal !important; /* Ensure normal line height */
+    padding-top: 8px !important;    /* Add some top padding */
+    padding-bottom: 8px !important; /* Add some bottom padding */
+}
+
+/* Custom styling for the AG Grid theme to align with Tailwind aesthetics */
+.ag-theme-alpine {
+    /* Set font family for the grid to Inter */
+    --ag-font-family: 'Inter', sans-serif;
+    /* Header background color */
+    --ag-header-background-color: #e2e8f0; /* Tailwind gray-200 */
+    /* Alternate row background color for better readability */
+    --ag-odd-row-background-color: #f8fafc; /* Tailwind gray-50 */
+    /* Hover state for rows */
+    --ag-row-hover-color: #e0f2fe; /* Tailwind blue-100 */
+    /* Selected row background color */
+    --ag-selected-row-background-color: #bfdbfe; /* Tailwind blue-200 */
+    /* Border color for the grid */
+    --ag-border-color: #cbd5e1; /* Tailwind slate-300 */
+    /* Border between rows */
+    --ag-row-border-color: #e2e8f0; /* Tailwind gray-200 */
+    /* Rounded corners for the grid container */
+    border-radius: 0.5rem; /* Equivalent to Tailwind's rounded-lg */
+}

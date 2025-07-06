@@ -1,0 +1,46 @@
+/* Optional: SCSS styles for the skills section */
+.skills-list-container {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
+}
+
+.skill-category {
+  width: 100%;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+
+  @media (min-width: 640px) {
+    width: 33.333333%;
+    margin-bottom: 0;
+  }
+}
+
+.skill-details {
+  width: 100%;
+  color: #4b5563;
+
+  @media (min-width: 640px) {
+    width: 66.666667%;
+  }
+}

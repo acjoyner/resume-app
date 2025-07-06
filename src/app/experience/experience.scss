@@ -1,0 +1,47 @@
+// Optional: If you prefer not to use Tailwind CSS for certain elements.
+.work-experience-container {
+  margin-bottom: 2rem;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.role-container {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #cbd5e0;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.role-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.role-date {
+  font-size: 0.875rem;
+  color: #718096;
+  font-family: monospace;
+}
+
+.responsibilities-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-top: 0.5rem;
+  color: #4a5568;
+  padding-left: 1.25rem;
+
+  li {
+    margin-bottom: 0.25rem;
+  }
+}
