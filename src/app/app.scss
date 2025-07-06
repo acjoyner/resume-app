@@ -28,3 +28,13 @@
     /* Rounded corners for the grid container */
     border-radius: 0.5rem; /* Equivalent to Tailwind's rounded-lg */
 }
+
+.app-background {
+    background-image: url('../assets/hanna.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 1rem;
+    color: #1f2937; /* Tailwind gray-800 */
+}
