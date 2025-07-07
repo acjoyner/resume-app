@@ -4,13 +4,16 @@ import { Education } from './education/education';
 import { Experience } from './experience/experience';
 import { Projects } from './projects/projects';
 import { Skills } from './skills/skills';
+import { AskMeAnything } from './ask-me-anything/ask-me-anything';
 
 export const routes: Routes = [
-     { path: '', redirectTo: '/summary', pathMatch: 'full' }, // Default route
+  { path: '', redirectTo: '/summary', pathMatch: 'full' }, // Default route
   { path: 'summary', component: Summary },
   { path: 'projects', component: Projects },
   { path: 'experience', component: Experience },
   { path: 'skills', component: Skills },
   { path: 'education', component: Education },
-  { path: '**', redirectTo: '/summary' } // Wildcard route for any unmatched paths
+  { path: 'ask-me-anything', component: AskMeAnything },
+
+  { path: '**', redirectTo: '/summary' }, // Wildcard route for any unmatched paths
 ];

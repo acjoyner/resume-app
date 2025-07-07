@@ -10,6 +10,7 @@ import { Component, Input } from '@angular/core';
 })
 export class Projects {
   @Input() projects: any[] = [
+   
     {
       title: 'Critical Infrastructure Data Hub (CIDH) | Duke Energy',
       description: [
@@ -26,7 +27,7 @@ export class Projects {
       description: [
         'Upgrade current re-certification process surrounding firewall policy and monitoring systems.',
         'Implement Angular front-end interface to provide functionality for Panorama (firewall rules and policies) and Cyber Asset Lifecycle Management.',
-        'Produce dashboards and reporting tools related to bulk electric system cyber assets, electronic security, Electronic Access Point (EAP) Interfaces, Electronic Access Control or Monitoring Systems (EACMS) groupings, and Device Types.'
+        'Produce dashboards and reporting tools related to bulk electric system cyber assets and electronic security.'
       ],
       technologies: ['Angular', 'Python', 'dotnet', 'SQL', 'C#'],
       date: 'Dec 2023 - Present',
@@ -37,15 +38,25 @@ export class Projects {
       description: [
         'Developing a modern, responsive real estate website to showcase property listings and facilitate client interactions.',
         'Implementing user-friendly interfaces for property search, detailed views, and contact forms.',
-        'Integrating with backend services to manage property data and user accounts.',
-        'Utilizing Angular for the front-end, aiming for a dynamic user experience.',
-        'Planning integration with Firebase for secure authentication and database management.',
-        'Future plans include advanced search filters, map integration, and agent dashboards.'
+        'Planning integration with Firebase for secure authentication and database management.'
       ],
       technologies: ['Angular', 'Tailwind CSS', 'Firebase (planned)', 'Node.js (planned)'],
       date: 'June 2025 - Present',
       location: 'Charlotte, NC',
       repo: 'https://github.com/acjoyner/dream-estate-app'
-    }
+    },
+     {
+      title: 'End-to-end Multi-class Dog Breed Classification',
+      description: [
+        'Built a deep learning model to identify 120 different dog breeds from images.',
+        'Utilized transfer learning with a pre-trained model to handle unstructured image data.',
+        'Processed and augmented a dataset of over 10,000 training images from Kaggle.',
+        'The goal is to predict the breed of a dog from a photograph with high accuracy.'
+      ],
+      technologies: ['Python', 'TensorFlow', 'Keras', 'Pandas', 'NumPy', 'Google Colab'],
+      date: 'June 2025 - Present',
+      location: 'Charlotte, NC',
+      repo: 'https://github.com/acjoyner/DogVision' // ✅ Updated Link
+    },
   ];
 }

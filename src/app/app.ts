@@ -1,11 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Import CommonModule for ngClass, etc.
+import { CommonModule } from '@angular/common';
+import { Fab } from "./fab/fab"; // Import CommonModule for ngClass, etc.
+import { ChatBotModal } from './chat-bot-modal/chat-bot-modal';
+
 
 @Component({
   selector: 'app-root',
   standalone: true, // Mark as standalone component
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule], // Import necessary modules
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule, Fab, ChatBotModal], // Import necessary modules
   templateUrl: './app.html', // Updated template file name
   styleUrl: './app.scss' // Updated style file name (assuming .css)
 })
@@ -15,7 +18,7 @@ export class App { // Class name updated to App
 
   // Resume Data - Centralized data for the main app and passed to child components
   resumeData = {
-    name: "Anthony Clayton Joyner",
+    name: "Anthony C Joyner",
     title: "Dynamic IT Professional",
     summary: "A highly accomplished and results-driven IT professional with a robust background spanning diverse technical domains, including software development, system administration, database management, and cloud technologies. Passionate about leveraging cutting-edge technologies—particularly Java, Python, and JavaScript, complemented by expertise in Angular and Django frameworks—to engineer innovative and scalable IT solutions that enhance operational efficiency and drive business growth. My commitment extends to continuous learning and professional development, thriving in collaborative environments that foster creativity, excellence, and the successful delivery of complex projects. I am adept at translating intricate technical requirements into practical, high-impact solutions, consistently contributing to organizational success through strategic problem-solving and a proactive approach to technology challenges.",
     technicalSkills: {
