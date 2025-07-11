@@ -1,10 +1,14 @@
-<div class="min-h-screen bg-gray-100 p-4 sm:p-8 flex flex-col items-center app-background">
-  <div class="w-full max-w-4xl bg-white rounded-xl shadow-2xl p-6 sm:p-8 bg-opacity-90">
-     <nav class="mb-8 flex flex-wrap justify-center gap-3 sm:gap-4">
+<div
+  class="min-h-screen bg-gray-100 p-4 sm:p-8 flex flex-col items-center app-background"
+>
+  <div
+    class="w-full max-w-4xl bg-white rounded-xl shadow-2xl p-6 sm:p-8 bg-opacity-90"
+  >
+    <nav class="mb-8 flex flex-wrap justify-center gap-3 sm:gap-4">
       <a
         [routerLink]="['/summary']"
         [routerLinkActive]="['bg-blue-600', 'text-white', 'shadow-lg']"
-        [routerLinkActiveOptions]="{exact: true}"
+        [routerLinkActiveOptions]="{ exact: true }"
         class="px-4 py-2 rounded-lg font-semibold transition-all duration-300 ease-in-out bg-gray-200 text-gray-700 hover:bg-blue-200 hover:text-blue-800"
       >
         Summary
@@ -46,18 +50,24 @@
           <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="40" font-weight="bold">ACJ</text>
         </svg>
       </div> -->
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-2">
+      <h1
+        class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-2"
+      >
         {{ resumeData.name }}
       </h1>
-      <p class="text-xl sm:text-2xl text-blue-600 font-medium">{{ resumeData.title }}</p>
+      <p class="text-xl sm:text-2xl text-blue-600 font-medium">
+        {{ resumeData.title }}
+      </p>
     </header>
 
     <!-- Navigation Tabs -->
-   
 
     <!-- Router Outlet: This is where the routed components will be displayed -->
     <main>
       <router-outlet></router-outlet>
     </main>
+
+    <app-fab></app-fab>
+    <app-chat-bot-modal></app-chat-bot-modal>
   </div>
 </div>

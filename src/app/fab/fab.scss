@@ -1,0 +1,33 @@
+// src/app/components/fab/fab.component.scss
+
+.fab-button {
+  position: fixed;
+  bottom: 20px; /* Adjust vertical position */
+  right: 20px; /* Adjust horizontal position */
+  z-index: 999; /* Ensure it's above most content but below modal */
+  background-color: #007bff; /* Primary blue */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Make it round */
+  width: 56px; /* Standard FAB size */
+  height: 56px; /* Standard FAB size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.8em; /* Size of the icon */
+  line-height: 1; /* Remove extra line height */
+  padding-bottom: 3px; /* Fine-tune icon vertical alignment */
+
+  &:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+
+  &:active {
+    transform: translateY(0); /* Return to original position */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow on click */
+  }
+}
