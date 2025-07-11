@@ -35,6 +35,7 @@
           },
           "configurations": {
             "production": {
+                "outputPath": "dist/resume-app", 
               "budgets": [
                 {
                   "type": "initial",

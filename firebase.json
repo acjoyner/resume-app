@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/resume-app", 
+    "public": "dist/resume-app/browser", 
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -13,8 +13,16 @@
       }
     ]
   },
-  "functions": { 
-    "source": "functions", 
-    "runtime": "python312"                       
+  "functions": {
+    "source": "functions",
+    "runtime": "python311",
+     "entryPoint": "main",
+    "ask_blog": {
+      "memory": "512MiB"
+    },
+    "trigger_ingestion": {
+      "memory": "512MiB",
+      "timeoutSeconds": 300
+    }
   }
 }

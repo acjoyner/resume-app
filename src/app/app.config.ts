@@ -10,7 +10,7 @@ import { getAuth, provideAuth } from '@angular/fire/auth'; // If using Auth
 // If you are using Firestore, add:
 // import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
-import { environment } from '../environments/environment'; // Your environment file
+import { environment } from '../environments/environment.prod'; // Your environment file
 import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {

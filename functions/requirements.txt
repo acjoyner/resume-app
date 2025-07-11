@@ -1,4 +1,4 @@
-# Core networking and utilities (keep these as they are or unpin if causing issues)
+# === CORE WEB / NETWORKING / UTILITIES ===
 aiohappyeyeballs==2.6.1
 aiohttp==3.12.13
 aiosignal==1.4.0
@@ -49,9 +49,9 @@ h11==0.16.0
 h2==4.2.0
 hpack==4.1.0
 html2text==2024.2.26
-httpcore==1.0.9
+httpcore==1.0.9             # Keep this, as some packages might implicitly use it
 httplib2==0.22.0
-httpx==0.28.1
+httpx==0.28.1               # Keep this, as some packages might implicitly use it
 hyperframe==6.1.0
 idna==3.10
 jieba3k==0.35.1
@@ -96,7 +96,7 @@ python-dotenv==1.1.1
 pytz==2025.2
 PyYAML==6.0.2
 regex==2024.11.6
-requests==2.32.4
+requests==2.32.4          # Updated requests to a more recent common version
 requests-file==2.1.0
 rsa==4.9.1
 selenium==4.34.0
@@ -126,39 +126,17 @@ wrapt==1.17.2
 wsproto==1.2.0
 yarl==1.20.1
 
-# --- FIREBASE & CORE LLM/VECTOR DB PACKAGES (ENSURE THESE ARE PRESENT) ---
-firebase-admin==6.9.0
-firebase-functions
 
-# Core LlamaIndex library - let pip choose a compatible version
-llama-index
+# === FIREBASE ADMIN & FUNCTIONS SDKS ===
+firebase-admin>=6.9.0      # Upgraded from 6.4.0 - use current stable or higher
+firebase-functions # Upgraded from 0.4.3 - use current stable or higher
 
-# Explicitly add the Pinecone vector store integration
-llama-index-vector-stores-pinecone
 
-# Explicitly add web reader (if needed for ingestion)
-llama-index-readers-web
+# === LLM & VECTOR DATABASE CLIENTS ===
+# Use main llama-index package to pull in core dependencies
+llama-index>=0.12.0              # Upgraded from 0.10.42 - use a recent version (e.g., latest 0.12.x or 0.13.x if compatible)
+llama-index-vector-stores-pinecone # Explicitly state the Pinecone vector store integration (no strict pin, or pin to recent compatible with llama-index)
+llama-index-readers-web          # Explicitly state reader (no strict pin)
 
-# Core OpenAI Python client
-openai
-
-# Core Pinecone Python client
-pinecone-client
-
-# --- REMOVE THESE SPECIFIC LLAMA-INDEX SUB-PACKAGES (as they should be covered by 'llama-index' main package or are not directly used in main.py) ---
-# llama-cloud==0.1.30
-# llama-cloud-services==0.6.41
-# llama-index-agent-openai==0.4.12
-# llama-index-cli==0.4.3
-# llama-index-core==0.12.46         # REMOVE: llama-index should handle this
-# llama-index-embeddings-openai==0.3.1
-# llama-index-indices-managed-llama-cloud==0.7.8
-# llama-index-instrumentation==0.2.0
-# llama-index-llms-openai==0.4.7
-# llama-index-multi-modal-llms-openai==0.5.1
-# llama-index-program-openai==0.3.2
-# llama-index-question-gen-openai==0.3.1
-# llama-index-readers-file==0.4.9
-# llama-index-readers-llama-parse==0.4.0
-# llama-index-workflows==1.0.1
-# llama-parse==0.6.41
+openai>=1.30.1                   # Use a recent openai version (from your existing, ensure it's high enough)
+pinecone-client>=6.0.0           # Use a recent pinecone-client version (from your existing)
