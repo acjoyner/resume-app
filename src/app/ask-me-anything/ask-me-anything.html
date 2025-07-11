@@ -1,0 +1,27 @@
+ <div class="ask-me-anything-container">
+      <h2>Ask Me Anything About Anthony</h2>
+
+      <div *ngIf="!(authService.user$ | async); else loggedInControls" class="auth-prompt">
+        <p>Please log in to ask a question:</p>
+        <button (click)="loginWithGoogle()">Login with Google</button>
+      </div>
+
+      <ng-template #loggedInControls>
+        <p>Logged in as: {{ (authService.user$ | async)?.email }}</p>
+        <button (click)="logout()">Logout</button>
+        <hr>
+        <textarea [(ngModel)]="userQuery" placeholder="Type your question here..." rows="4"></textarea>
+        <button (click)="submitQuery()" [disabled]="isLoading || !userQuery.trim()">
+          {{ isLoading ? 'Thinking...' : 'Ask' }}
+        </button>
+
+        <div *ngIf="answer" class="answer-section">
+          <h3>Answer:</h3>
+          <p>{{ answer }}</p>
+        </div>
+      </ng-template>
+
+      <div *ngIf="error" class="error-message">
+        <p>Error: {{ error }}</p>
+      </div>
+    </div>
