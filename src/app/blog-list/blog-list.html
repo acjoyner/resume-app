@@ -1,0 +1,20 @@
+<div class="p-6 md:p-12 max-w-6xl mx-auto">
+  <h1 class="text-4xl font-bold text-gray-800 mb-8">Blog</h1>
+
+  <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+    <!-- Make sure *ngFor is on the wrapper div itself -->
+    <div
+      *ngFor="let post of posts"
+      class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow break-words"
+    >
+      <a [routerLink]="['/blog', post.slug]">
+        <h2 class="text-2xl font-semibold text-blue-600 hover:underline break-words">
+          {{ post.title }}
+        </h2>
+        <p class="text-gray-600 mt-2 break-words whitespace-pre-wrap">
+          {{ post.summary }}
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
