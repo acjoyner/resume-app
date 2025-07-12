@@ -78,7 +78,7 @@ export class Experience {
   },
   {
     company: 'Bank of America',
-    title: 'Part-Time IT Instructor',
+    title: 'VP, Senior Auditor I',
     date: 'Jan 2018 - Dec 2024',
     responsibilities: [
       'Collaborated with the Strategy Development and Investigation Team, playing a pivotal role in updating server configurations and securing access to closed audit databases to facilitate comprehensive audits and investigations.',

@@ -41,15 +41,17 @@
       >
         Education
       </a>
+      <!-- New Blog Link Added Here -->
+      <a
+        [routerLink]="['/blog']"
+        [routerLinkActive]="['bg-blue-600', 'text-white', 'shadow-lg']"
+        class="px-4 py-2 rounded-lg font-semibold transition-all duration-300 ease-in-out bg-gray-200 text-gray-700 hover:bg-blue-200 hover:text-blue-800"
+      >
+        Blog
+      </a>
     </nav>
     <!-- Header Section -->
     <header class="text-center mb-8">
-      <!-- Custom Logo with Initials -->
-      <!-- <div class="mb-4 flex justify-center items-center">
-        <svg viewBox="0 0 100 100" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-blue-600 text-white p-4 shadow-lg">
-          <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="40" font-weight="bold">ACJ</text>
-        </svg>
-      </div> -->
       <h1
         class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-2"
       >
@@ -59,8 +61,6 @@
         {{ resumeData.title }}
       </p>
     </header>
-
-    <!-- Navigation Tabs -->
 
     <!-- Router Outlet: This is where the routed components will be displayed -->
     <main>
