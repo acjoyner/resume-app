@@ -1,0 +1,801 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15" version="28.0.3">
+  <diagram name="Page-1" id="hpt8GlXcPanmMKEL3gH-">
+    <mxGraphModel dx="3645" dy="2953" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RE7dX6fePHtghS0XMo6t-51" value="    User -- &quot;1. Asks question in UI&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-849" y="1551" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-52" value=" Frontend" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-959" y="1481" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-53" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-51" target="RE7dX6fePHtghS0XMo6t-52" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-54" value="    Frontend -- &quot;2. Sends query + Auth Token via HTTPS&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1309" y="841" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-55" value=" AskBlog" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1159" y="631" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-56" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-54" target="RE7dX6fePHtghS0XMo6t-55" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-57" value="    AskBlog -." style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1709" y="111" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-58" value="|3. Validates Token| FirebaseAuth" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1619" y="41" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-59" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-57" target="RE7dX6fePHtghS0XMo6t-58" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-60" value="    AskBlog -- &quot;4. Gets embedding for the query&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-509" y="1011" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-61" value=" OpenAI_Embed" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-279" y="901" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-62" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-60" target="RE7dX6fePHtghS0XMo6t-61" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-63" value="    OpenAI_Embed -- &quot;5. Returns query vector&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1239" y="421" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-64" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-63" target="RE7dX6fePHtghS0XMo6t-55" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-65" value="    AskBlog -- &quot;6. Queries Pinecone with vector to find context&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-549" y="-389" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-66" value=" Pinecone" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-289" y="-259" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-67" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-65" target="RE7dX6fePHtghS0XMo6t-66" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-68" value="    Pinecone -- &quot;7. Returns relevant text chunks&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1469" y="601" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-69" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-68" target="RE7dX6fePHtghS0XMo6t-55" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-70" value="    AskBlog -- &quot;8. Sends prompt (query + context) to LLM&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1049" y="-639" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-71" value=" OpenAI_LLM" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-979" y="-479" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-72" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-70" target="RE7dX6fePHtghS0XMo6t-71" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-73" value="    OpenAI_LLM -- &quot;9. Generates final answer&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1039" y="651" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-74" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-73" target="RE7dX6fePHtghS0XMo6t-55" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-75" value="    AskBlog -- &quot;10. Sends JSON response back to app&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1249" y="1421" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-76" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-75" target="RE7dX6fePHtghS0XMo6t-52" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-77" value="    Frontend -- &quot;11. Displays answer to User&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-2379" y="-29" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-78" value=" User" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-2279" y="-199" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-79" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-77" target="RE7dX6fePHtghS0XMo6t-78" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-80" value="    Admin -- &quot;A. Creates payload.json with resume text&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-119" y="-769" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-81" value=" payload(payload.json)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="91" y="-649" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-82" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-80" target="RE7dX6fePHtghS0XMo6t-81" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-83" value="    Admin -- &quot;B. Sends payload + Admin Token via cURL&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1909" y="-469" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-84" value=" TriggerIngestion" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1639" y="-559" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-85" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-83" target="RE7dX6fePHtghS0XMo6t-84" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-86" value="    TriggerIngestion -." style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="531" y="-1019" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-87" value="|C. Validates Admin Token with &#39;admin&#39; claim| FirebaseAuth" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="291" y="-1139" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-88" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-86" target="RE7dX6fePHtghS0XMo6t-87" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-89" value="    TriggerIngestion -- &quot;D. Creates embeddings for each text section&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-269" y="791" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-90" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-89" target="RE7dX6fePHtghS0XMo6t-61" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-91" value="    OpenAI_Embed -- &quot;E. Returns text vectors&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1589" y="-689" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-92" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-91" target="RE7dX6fePHtghS0XMo6t-84" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-93" value="    TriggerIngestion -- &quot;F. Upserts (adds/updates) vectors in Pinecone&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-309" y="-129" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-94" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-93" target="RE7dX6fePHtghS0XMo6t-66" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-95" value="    TriggerIngestion -- &quot;G. Returns success message to Admin&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-609" y="-1569" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-96" value=" Admin" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-389" y="-1429" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-97" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-95" target="RE7dX6fePHtghS0XMo6t-96" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-98" value="    Admin -- &quot;I. Sends email + User Token via cURL&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-2519" y="-769" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-99" value=" SetAdmin" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-2259" y="-839" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-100" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-98" target="RE7dX6fePHtghS0XMo6t-99" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-101" value="    SetAdmin -." style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1179" y="-1199" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-102" value="|II. Validates User Token| FirebaseAuth" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1089" y="-1249" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-103" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-101" target="RE7dX6fePHtghS0XMo6t-102" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-104" value="    SetAdmin -- &quot;III. Sets &#39;admin:true&#39; claim on user profile&quot; -" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-749" y="181" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-105" value=" FirebaseAuth" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-749" y="61" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-106" value="" style="rounded=0;" edge="1" source="RE7dX6fePHtghS0XMo6t-104" target="RE7dX6fePHtghS0XMo6t-105" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-107" value="Legend" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1600" width="1042" height="129" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-108" value="User" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-107">
+          <mxGeometry x="43" y="46" width="92" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-109" value="Frontend" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-107">
+          <mxGeometry x="185" y="46" width="125" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-110" value="Backend (Cloud Functions)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-107">
+          <mxGeometry x="359" y="46" width="250" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-111" value="External APIs &amp; DBs" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-107">
+          <mxGeometry x="660" y="46" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-112" value="Admin" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-107">
+          <mxGeometry x="910" y="46" width="105" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-113" value="External APIs &amp; Databases" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="157" y="2074" width="603" height="659" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-114" value="Backend Services (Firebase Cloud Functions)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1065" y="1941" width="1208" height="641" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-115" value="Frontend Application (Firebase Hosting)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1069" y="1783" width="252" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-116" value="User (Browser)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1112" y="1638" width="166" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-117" value="Admin (Terminal Access)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="795" y="2352" width="235" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-118" value="Angular Web App" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1106" y="1770" width="182" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-119" value="ask_blog Function" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="1966" width="188" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-120" value="trigger_ingestion Function" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1492" y="2226" width="248" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-121" value="set_admin_claim Function (One-Time Use)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1978" y="2479" width="260" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-122" value="Firebase Authentication" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="232" y="2654" width="231" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-123" value="Pinecone Vector DB" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="343" y="2352" width="199" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-124" value="OpenAI Embeddings API" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="224" y="2099" width="229" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-125" value="OpenAI LLM (ChatGPT)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="503" y="2099" width="222" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-126" value="payload.json" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="837" y="2491" width="151" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-127" value="1. Ask question" style="curved=1;startArrow=none;endArrow=block;exitX=0.44;exitY=0.99;entryX=0.41;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-116" target="RE7dX6fePHtghS0XMo6t-118">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1162" y="1756" />
+              <mxPoint x="1162" y="1783" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-128" value="2. Send query + Auth Token" style="curved=1;startArrow=none;endArrow=block;exitX=0.41;exitY=1;entryX=0.41;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-118" target="RE7dX6fePHtghS0XMo6t-119">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1162" y="1887" />
+              <mxPoint x="1162" y="1941" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-129" value="3. Validate token" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.65;entryX=0.33;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-119" target="RE7dX6fePHtghS0XMo6t-122">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1808" y="2047" />
+              <mxPoint x="1808" y="2582" />
+              <mxPoint x="257" y="2618" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-130" value="4. Get embedding" style="curved=1;startArrow=none;endArrow=block;exitX=0.35;exitY=1;entryX=1;entryY=0.36;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-119" target="RE7dX6fePHtghS0XMo6t-124">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1138" y="2047" />
+              <mxPoint x="1138" y="2074" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-131" value="5. Return vector" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.37;entryX=0.42;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-124" target="RE7dX6fePHtghS0XMo6t-119">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1162" y="2074" />
+              <mxPoint x="1162" y="2047" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-132" value="6. Query Pinecone" style="curved=1;startArrow=none;endArrow=block;exitX=0.65;exitY=1;entryX=1;entryY=0.36;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-119" target="RE7dX6fePHtghS0XMo6t-123">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1249" y="2047" />
+              <mxPoint x="1249" y="2316" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-133" value="7. Return relevant chunks" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.38;entryX=1;entryY=0.93;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-123" target="RE7dX6fePHtghS0XMo6t-119">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1416" y="2316" />
+              <mxPoint x="1416" y="2047" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-134" value="8. Send prompt to LLM" style="curved=1;startArrow=none;endArrow=block;exitX=0.48;exitY=1;entryX=1;entryY=0.31;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-119" target="RE7dX6fePHtghS0XMo6t-125">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1186" y="2047" />
+              <mxPoint x="1186" y="2074" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-135" value="9. Return answer" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.33;entryX=0.59;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-125" target="RE7dX6fePHtghS0XMo6t-119">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1227" y="2074" />
+              <mxPoint x="1227" y="2047" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-136" value="10. Send response" style="curved=1;startArrow=none;endArrow=block;exitX=0.71;exitY=0;entryX=0.71;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-119" target="RE7dX6fePHtghS0XMo6t-118">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1268" y="1941" />
+              <mxPoint x="1268" y="1887" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-137" value="11. Display answer" style="curved=1;startArrow=none;endArrow=block;exitX=0.71;exitY=0;entryX=0.63;entryY=0.99;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-118" target="RE7dX6fePHtghS0XMo6t-116">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1268" y="1783" />
+              <mxPoint x="1268" y="1756" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-138" value="A. Create payload.json" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-117" target="RE7dX6fePHtghS0XMo6t-126">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-139" value="B. Send via cURL" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.32;entryX=0.56;entryY=0.99;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-117" target="RE7dX6fePHtghS0XMo6t-120">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1654" y="2316" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-140" value="C. Validate Admin Token" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.97;entryX=0.37;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-120" target="RE7dX6fePHtghS0XMo6t-122">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1919" y="2316" />
+              <mxPoint x="1919" y="2582" />
+              <mxPoint x="277" y="2618" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-141" value="D. Create embeddings" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.36;entryX=0.83;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-120" target="RE7dX6fePHtghS0XMo6t-124">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="516" y="2189" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-142" value="E. Return vectors" style="curved=1;startArrow=none;endArrow=block;exitX=0.38;exitY=1;entryX=0;entryY=0.38;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-124" target="RE7dX6fePHtghS0XMo6t-120">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="274" y="2189" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-143" value="F. Upsert vectors" style="curved=1;startArrow=none;endArrow=block;exitX=0.01;exitY=0.99;entryX=1;entryY=0.37;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-120" target="RE7dX6fePHtghS0XMo6t-123">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1333" y="2316" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-144" value="G. Return success" style="curved=1;startArrow=none;endArrow=block;exitX=0.31;exitY=0.99;entryX=1;entryY=0.27;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-120" target="RE7dX6fePHtghS0XMo6t-117">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1506" y="2316" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-145" value="I. Send email + token" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.62;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-117" target="RE7dX6fePHtghS0XMo6t-121">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2108" y="2442" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-146" value="II. Validate token" style="curved=1;startArrow=none;endArrow=block;exitX=0.23;exitY=1;entryX=0.55;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-121" target="RE7dX6fePHtghS0XMo6t-122">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1990" y="2582" />
+              <mxPoint x="375" y="2618" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-147" value="III. Set admin=true claim" style="curved=1;startArrow=none;endArrow=block;exitX=0.59;exitY=1;entryX=0.87;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-121" target="RE7dX6fePHtghS0XMo6t-122">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2147" y="2582" />
+              <mxPoint x="550" y="2618" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-148" value="Legend" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="20" y="2750" width="250" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-149" value="User" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-148">
+          <mxGeometry x="87" y="43" width="92" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-150" value="Frontend" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-148">
+          <mxGeometry x="70" y="147" width="125" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-151" value="Backend" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-148">
+          <mxGeometry x="73" y="251" width="120" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-152" value="External API/DB" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-148">
+          <mxGeometry x="46" y="355" width="175" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-153" value="Admin" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-148">
+          <mxGeometry x="80" y="459" width="105" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-154" value="User" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="2993" width="92" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-155" value="Angular App" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="292" y="3344" width="146" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-156" value="ask_blog Fn" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="294" y="3452" width="144" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-157" value="OpenAI Embedding" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="522" y="3560" width="195" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-158" value="Pinecone DB" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="231" y="3813" width="148" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-159" value="OpenAI LLM" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="187" y="3560" width="143" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-160" value="Firebase Auth" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="644" y="4066" width="159" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-161" value="Admin (You)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="484" y="3813" width="146" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-162" value="trigger_ingestion Fn" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="517" y="3687" width="203" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-163" value="set_admin_claim Fn" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="317" y="3940" width="203" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-164" value="payload.json" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="570" y="3940" width="151" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-165" value="1. Ask" style="curved=1;startArrow=none;endArrow=block;exitX=0.51;exitY=1;entryX=0.54;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-154" target="RE7dX6fePHtghS0XMo6t-155">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="378" y="3317" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-166" value="2. Query + Token" style="curved=1;startArrow=none;endArrow=block;exitX=0.54;exitY=1;entryX=0.54;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-155" target="RE7dX6fePHtghS0XMo6t-156">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="378" y="3425" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-167" value="3. Validate Token" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.65;entryX=0.85;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-156" target="RE7dX6fePHtghS0XMo6t-160">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="856" y="3533" />
+              <mxPoint x="856" y="4030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-168" value="4. Embed Query" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.67;entryX=0.9;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-156" target="RE7dX6fePHtghS0XMo6t-157">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="776" y="3533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-169" value="5. Return Vector" style="curved=1;startArrow=none;endArrow=block;exitX=0.05;exitY=0;entryX=0.77;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-157" target="RE7dX6fePHtghS0XMo6t-156">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="445" y="3533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-170" value="6. Query Vector" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.67;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-156" target="RE7dX6fePHtghS0XMo6t-158">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="366" y="3777" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-171" value="7. Return Context" style="curved=1;startArrow=none;endArrow=block;exitX=0.06;exitY=0;entryX=0;entryY=0.84;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-158" target="RE7dX6fePHtghS0XMo6t-156">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="152" y="3777" />
+              <mxPoint x="152" y="3533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-172" value="8. Send Prompt" style="curved=1;startArrow=none;endArrow=block;exitX=0.27;exitY=1;entryX=0.65;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-156" target="RE7dX6fePHtghS0XMo6t-159">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="301" y="3533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-173" value="9. Return Answer" style="curved=1;startArrow=none;endArrow=block;exitX=0.35;exitY=0;entryX=0;entryY=0.98;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-159" target="RE7dX6fePHtghS0XMo6t-156">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="216" y="3533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-174" value="10. Response" style="curved=1;startArrow=none;endArrow=block;exitX=0.46;exitY=0;entryX=0.46;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-156" target="RE7dX6fePHtghS0XMo6t-155">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="354" y="3425" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-175" value="11. Show Answer" style="curved=1;startArrow=none;endArrow=block;exitX=0.46;exitY=0;entryX=0.48;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-155" target="RE7dX6fePHtghS0XMo6t-154">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="354" y="3317" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-176" value="A. Create" style="curved=1;startArrow=none;endArrow=block;exitX=0.76;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-161" target="RE7dX6fePHtghS0XMo6t-164">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="646" y="3903" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-177" value="B. cURL Upload" style="curved=1;startArrow=none;endArrow=block;exitX=0.25;exitY=0;entryX=0.19;entryY=0.99;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-161" target="RE7dX6fePHtghS0XMo6t-162">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="472" y="3777" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-178" value="C. Validate Admin" style="curved=1;startArrow=none;endArrow=block;exitX=0.82;exitY=0.99;entryX=0.62;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-162" target="RE7dX6fePHtghS0XMo6t-160">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="769" y="3777" />
+              <mxPoint x="769" y="4030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-179" value="D. Embed Text" style="curved=1;startArrow=none;endArrow=block;exitX=0.19;exitY=-0.01;entryX=0.18;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-162" target="RE7dX6fePHtghS0XMo6t-157">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="472" y="3650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-180" value="E. Vectors" style="curved=1;startArrow=none;endArrow=block;exitX=0.8;exitY=1;entryX=0.79;entryY=-0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-157" target="RE7dX6fePHtghS0XMo6t-162">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="758" y="3650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-181" value="F. Upsert to Pinecone" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.82;entryX=0.37;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-162" target="RE7dX6fePHtghS0XMo6t-158">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="259" y="3777" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-182" value="G. Success" style="curved=1;startArrow=none;endArrow=block;exitX=0.62;exitY=0.99;entryX=0.85;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-162" target="RE7dX6fePHtghS0XMo6t-161">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="678" y="3777" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-183" value="I. Send Email + Token" style="curved=1;startArrow=none;endArrow=block;exitX=0.1;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-161" target="RE7dX6fePHtghS0XMo6t-163">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="419" y="3903" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-184" value="II. Validate Token" style="curved=1;startArrow=none;endArrow=block;exitX=0.78;exitY=1;entryX=0.04;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-163" target="RE7dX6fePHtghS0XMo6t-160">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="551" y="4030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-185" value="III. Set admin=true" style="curved=1;startArrow=none;endArrow=block;exitX=0.34;exitY=1;entryX=0;entryY=0.26;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-163" target="RE7dX6fePHtghS0XMo6t-160">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="341" y="4030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-186" value="Legend" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="20" y="4140" width="275" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-187" value="👤 User" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-186">
+          <mxGeometry x="87" y="43" width="118" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-188" value="💻 Frontend" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-186">
+          <mxGeometry x="70" y="147" width="151" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-189" value="🧠 Backend" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-186">
+          <mxGeometry x="73" y="251" width="146" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-190" value="🔗 External API/DB" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-186">
+          <mxGeometry x="46" y="355" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-191" value="🛠️ Admin" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="RE7dX6fePHtghS0XMo6t-186">
+          <mxGeometry x="80" y="459" width="131" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-192" value="👤 User" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="345" y="4383" width="118" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-193" value="💻 Angular App" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="318" y="4734" width="172" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-194" value="🧠 ask_blog Fn" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="4842" width="169" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-195" value="🔤 OpenAI Embed API" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="586" y="4950" width="218" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-196" value="🗃️ Pinecone DB" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="236" y="5203" width="174" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-197" value="🤖 OpenAI LLM" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="200" y="4950" width="169" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-198" value="🔐 Firebase Auth" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="732" y="5456" width="184" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-199" value="🛠️ Admin (You)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="536" y="5203" width="172" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-200" value="📥 trigger_ingestion Fn" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="581" y="5077" width="229" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-201" value="⚙️ set_admin_claim Fn" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="349" y="5330" width="229" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-202" value="📝 payload.json" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="628" y="5330" width="177" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-203" value="1. Ask" style="curved=1;startArrow=none;endArrow=block;exitX=0.51;exitY=1;entryX=0.54;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-192" target="RE7dX6fePHtghS0XMo6t-193">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="416" y="4707" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-204" value="2. Send Query + Token" style="curved=1;startArrow=none;endArrow=block;exitX=0.54;exitY=1;entryX=0.53;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-193" target="RE7dX6fePHtghS0XMo6t-194">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="416" y="4815" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-205" value="3. Validate Token" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.65;entryX=0.85;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-194" target="RE7dX6fePHtghS0XMo6t-198">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="975" y="4923" />
+              <mxPoint x="975" y="5420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-206" value="4. Embed Query" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.67;entryX=0.95;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-194" target="RE7dX6fePHtghS0XMo6t-195">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="889" y="4923" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-207" value="5. Return Vector" style="curved=1;startArrow=none;endArrow=block;exitX=0.03;exitY=0;entryX=0.75;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-195" target="RE7dX6fePHtghS0XMo6t-194">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="4923" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-208" value="6. Query Pinecone" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.7;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-194" target="RE7dX6fePHtghS0XMo6t-196">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="404" y="5167" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-209" value="7. Return Context" style="curved=1;startArrow=none;endArrow=block;exitX=0.11;exitY=0;entryX=0;entryY=0.85;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-196" target="RE7dX6fePHtghS0XMo6t-194">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="165" y="5167" />
+              <mxPoint x="165" y="4923" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-210" value="8. Send Prompt" style="curved=1;startArrow=none;endArrow=block;exitX=0.29;exitY=1;entryX=0.65;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-194" target="RE7dX6fePHtghS0XMo6t-197">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="333" y="4923" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-211" value="9. Return Answer" style="curved=1;startArrow=none;endArrow=block;exitX=0.36;exitY=0;entryX=0;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-197" target="RE7dX6fePHtghS0XMo6t-194">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="236" y="4923" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-212" value="10. Response" style="curved=1;startArrow=none;endArrow=block;exitX=0.46;exitY=0;entryX=0.47;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-194" target="RE7dX6fePHtghS0XMo6t-193">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="392" y="4815" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-213" value="11. Show Answer" style="curved=1;startArrow=none;endArrow=block;exitX=0.47;exitY=0;entryX=0.49;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-193" target="RE7dX6fePHtghS0XMo6t-192">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="392" y="4707" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-214" value="A. Create" style="curved=1;startArrow=none;endArrow=block;exitX=0.73;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-199" target="RE7dX6fePHtghS0XMo6t-202">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="717" y="5293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-215" value="B. Upload via cURL" style="curved=1;startArrow=none;endArrow=block;exitX=0.26;exitY=0;entryX=0.18;entryY=0.99;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-199" target="RE7dX6fePHtghS0XMo6t-200">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="524" y="5167" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-216" value="C. Validate Admin Token" style="curved=1;startArrow=none;endArrow=block;exitX=0.81;exitY=0.99;entryX=0.59;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-200" target="RE7dX6fePHtghS0XMo6t-198">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="864" y="5167" />
+              <mxPoint x="864" y="5420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-217" value="D. Embed Text" style="curved=1;startArrow=none;endArrow=block;exitX=0.17;exitY=-0.01;entryX=0.15;entryY=1;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-200" target="RE7dX6fePHtghS0XMo6t-195">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="518" y="5040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-218" value="E. Return Vectors" style="curved=1;startArrow=none;endArrow=block;exitX=0.82;exitY=1;entryX=0.8;entryY=-0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-195" target="RE7dX6fePHtghS0XMo6t-200">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="858" y="5040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-219" value="F. Upsert Vectors" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.82;entryX=0.41;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-200" target="RE7dX6fePHtghS0XMo6t-196">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="285" y="5167" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-220" value="G. Success" style="curved=1;startArrow=none;endArrow=block;exitX=0.62;exitY=0.99;entryX=0.84;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-200" target="RE7dX6fePHtghS0XMo6t-199">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="761" y="5167" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-221" value="I. Send Email + Token" style="curved=1;startArrow=none;endArrow=block;exitX=0.11;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-199" target="RE7dX6fePHtghS0XMo6t-201">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="464" y="5293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-222" value="II. Validate Token" style="curved=1;startArrow=none;endArrow=block;exitX=0.79;exitY=1;entryX=0.03;entryY=0.01;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-201" target="RE7dX6fePHtghS0XMo6t-198">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="621" y="5420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RE7dX6fePHtghS0XMo6t-223" value="III. Set admin=true" style="curved=1;startArrow=none;endArrow=block;exitX=0.36;exitY=1;entryX=0;entryY=0.26;rounded=0;" edge="1" parent="1" source="RE7dX6fePHtghS0XMo6t-201" target="RE7dX6fePHtghS0XMo6t-198">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="387" y="5420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,60 @@
+graph TB
+    %% Custom Styling
+    classDef user fill:#cce5ff,stroke:#3399ff,stroke-width:2px,color:#003366;
+    classDef frontend fill:#d1f7c4,stroke:#33cc33,stroke-width:2px,color:#264d00;
+    classDef backend fill:#ffe0cc,stroke:#ff9933,stroke-width:2px,color:#663d00;
+    classDef external fill:#f0f0f5,stroke:#9999cc,stroke-width:2px,color:#33334d;
+    classDef admin fill:#f2ccff,stroke:#cc66ff,stroke-width:2px,color:#4b004d;
+
+    %% User Flow
+    User["👤 User"]:::user
+    Frontend["💻 Angular App"]:::frontend
+    AskBlog["🧠 ask_blog Fn"]:::backend
+    OpenAI_Embed["🔤 OpenAI Embed API"]:::external
+    Pinecone["🗃️ Pinecone DB"]:::external
+    OpenAI_LLM["🤖 OpenAI LLM"]:::external
+
+    %% Auth
+    FirebaseAuth["🔐 Firebase Auth"]:::external
+
+    %% Admin Flow
+    Admin["🛠️ Admin (You)"]:::admin
+    Trigger["📥 trigger_ingestion Fn"]:::backend
+    SetAdmin["⚙️ set_admin_claim Fn"]:::backend
+    Payload["📝 payload.json"]:::admin
+
+    %% User Flow
+    User -->|1. Ask| Frontend
+    Frontend -->|2. Send Query + Token| AskBlog
+    AskBlog -->|3. Validate Token| FirebaseAuth
+    AskBlog -->|4. Embed Query| OpenAI_Embed
+    OpenAI_Embed -->|5. Return Vector| AskBlog
+    AskBlog -->|6. Query Pinecone| Pinecone
+    Pinecone -->|7. Return Context| AskBlog
+    AskBlog -->|8. Send Prompt| OpenAI_LLM
+    OpenAI_LLM -->|9. Return Answer| AskBlog
+    AskBlog -->|10. Response| Frontend
+    Frontend -->|11. Show Answer| User
+
+    %% Admin Flow
+    Admin -->|A. Create| Payload
+    Admin -->|B. Upload via cURL| Trigger
+    Trigger -->|C. Validate Admin Token| FirebaseAuth
+    Trigger -->|D. Embed Text| OpenAI_Embed
+    OpenAI_Embed -->|E. Return Vectors| Trigger
+    Trigger -->|F. Upsert Vectors| Pinecone
+    Trigger -->|G. Success| Admin
+
+    %% One-Time Admin Setup
+    Admin -->|I. Send Email + Token| SetAdmin
+    SetAdmin -->|II. Validate Token| FirebaseAuth
+    SetAdmin -->|III. Set admin=true| FirebaseAuth
+
+    %% Legend
+    subgraph Legend
+        L1["👤 User"]:::user
+        L2["💻 Frontend"]:::frontend
+        L3["🧠 Backend"]:::backend
+        L4["🔗 External API/DB"]:::external
+        L5["🛠️ Admin"]:::admin
+    end
