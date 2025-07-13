@@ -11,7 +11,7 @@ import { getAnalytics } from 'firebase/analytics';
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyAsnN6jxHFqzqVBbYp7179Q7x_sIj4sKOc',
+    apiKey: 'Add your key here',
     authDomain: 'resume-app-3c130.firebaseapp.com',
     databaseURL: 'https://resume-app-3c130-default-rtdb.firebaseio.com',
     projectId: 'resume-app-3c130',
